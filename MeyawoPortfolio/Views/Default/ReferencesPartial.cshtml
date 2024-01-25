@@ -1,0 +1,34 @@
+﻿@model  List<MeyawoPortfolio.Models.TblReferences>
+
+
+
+<section class="section" id="testmonial">
+    <div class="container text-center">
+        <p class="section-subtitle">What Think Client About Me ?</p>
+        <h6 class="section-title mb-6">Testmonial</h6>
+
+        <!-- row -->
+    
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="@item.ImageUrl" class="testimonial-card-img"
+                                 alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">
+                                @item.Description
+                            </p>
+                            <h6 class="testimonial-card-title">@item.NameSurname</h6>
+                        </div>
+                    </div>
+                </div>
+                }
+            
+            </div> 
+        
+    </div> <!-- end of container -->
+</section>

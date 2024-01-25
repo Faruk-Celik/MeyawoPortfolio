@@ -38,5 +38,24 @@ namespace MeyawoPortfolio.Controllers
             var values = db.TblService.ToList();
             return PartialView(values);
         }
+        public PartialViewResult PortfolioPartial ()
+        {
+            var values = db.TblProject.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult ReferencesPartial ()
+        {
+            var values = db.TblReferences.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult FooterPartial () 
+        {
+            var values = db.TblSocialMedia.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult SectionPartial ()
+        {
+            return PartialView();
+        }
     }
 }

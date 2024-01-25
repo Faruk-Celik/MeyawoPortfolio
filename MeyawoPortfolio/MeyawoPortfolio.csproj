@@ -534,6 +534,10 @@
     <Content Include="Views\Default\FeaturePartial.cshtml" />
     <Content Include="Views\Default\AboutPartial.cshtml" />
     <Content Include="Views\Default\ServicePartial.cshtml" />
+    <Content Include="Views\Default\ReferencesPartial.cshtml" />
+    <Content Include="Views\Default\PortfolioPartial.cshtml" />
+    <Content Include="Views\Default\FooterPartial.cshtml" />
+    <Content Include="Views\Default\SectionPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
