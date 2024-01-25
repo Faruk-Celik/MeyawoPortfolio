@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,13 +128,62 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
+    <Compile Include="Controllers\FutureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\ReferencesController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblAbout.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblCategory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblContact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblFuture.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblProject.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblReferences.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblSocialMedia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -150,12 +207,29 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -167,6 +241,37 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\css\meyawo.css" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\analytics.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\avatar2.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\avatar3.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\folio-1.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\folio-2.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\folio-3.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\header.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\img-1.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\img-2.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\man.png" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\pencil-case.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\responsive.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\scooter.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\shipped.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\startup.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\toolbox.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\js\meyawo.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.affix.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.min.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.min.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.slim.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.slim.min.js" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\themify-icons\css\themify-icons.css" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\components.html" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\index.html" />
     <Content Include="Templates\sidebar-09\css\bootstrap.min.css" />
     <Content Include="Templates\sidebar-09\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Templates\sidebar-09\css\bootstrap\mixins\_screen-reader.css" />
@@ -195,7 +300,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Index1.cshtml" />
     <Content Include="Views\Category\Index2.cshtml" />
     <Content Include="Views\Shared\_TestLayout.cshtml" />
     <Content Include="Views\Education\Index.cshtml" />
@@ -301,12 +406,138 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
-    <Content Include="Views\About\CreateProject.cshtml" />
-    <Content Include="Views\Index\NewFolder1\View.cshtml" />
+    <Content Include="Views\AdminLayout\_HeaderPartial.cshtml" />
+    <Content Include="Views\AdminLayout\_SidebarPartial.cshtml" />
+    <Content Include="Views\AdminLayout\_Layout.cshtml" />
+    <Content Include="Views\AdminLayout\_ScriptPartial.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Future\Index.cshtml" />
+    <Content Include="Views\References\Index.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
+    <Content Include="Views\SocialMedia\Index.cshtml" />
+    <Content Include="Views\AdminLayout\_BootstrapIconPartial.cshtml" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\abstracts\_mixins.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\abstracts\_variables.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\base\_base.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\base\_typography.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\components\_breadcrumb.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\components\_button.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\components\_card.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\components\_code.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\components\_dropdown.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\components\_hamburger.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\components\_navbar.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\components\_pagination.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\layout\_footer.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\layout\_header.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\layout\_sections.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\meyawo.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_alert.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_background-variant.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_badge.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_border-radius.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_box-shadow.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_breakpoints.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_buttons.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_caret.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_clearfix.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_deprecate.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_float.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_forms.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_gradients.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_grid-framework.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_grid.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_hover.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_image.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_list-group.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_lists.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_nav-divider.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_pagination.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_reset-text.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_resize.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_screen-reader.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_size.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_table-row.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_text-emphasis.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_text-hide.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_text-truncate.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_transition.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_visibility.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_align.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_background.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_borders.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_clearfix.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_display.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_embed.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_flex.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_float.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_overflow.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_position.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_screenreaders.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_shadows.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_sizing.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_spacing.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_stretched-link.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_text.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_visibility.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\vendor\_rfs.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_alert.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_badge.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_breadcrumb.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_button-group.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_buttons.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_card.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_carousel.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_close.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_code.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_custom-forms.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_dropdown.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_forms.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_functions.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_grid.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_images.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_input-group.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_jumbotron.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_list-group.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_media.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_mixins.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_modal.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_nav.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_navbar.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_pagination.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_popover.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_print.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_progress.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_reboot.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_root.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_spinners.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_tables.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_toasts.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_tooltip.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_transitions.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_type.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_utilities.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_variables.scss" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.js.map" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.min.js.map" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.js.map" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.min.js.map" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.min.map" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.slim.min.map" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.eot" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.ttf" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.woff" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\HeadPartial.cshtml" />
+    <Content Include="Views\Default\NavbarPartial.cshtml" />
+    <Content Include="Views\Default\FeaturePartial.cshtml" />
+    <Content Include="Views\Default\AboutPartial.cshtml" />
+    <Content Include="Views\Default\ServicePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Index\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -334,6 +565,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

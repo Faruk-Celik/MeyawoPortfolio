@@ -1,0 +1,28 @@
+﻿@model List<MeyawoPortfolio.Models.TblReferences>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Referances Page</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Reference ID</th>
+        <th>Reference Name</th>
+        <th>Reference Image</th>
+        <th>Reference Description</th>
+        <th>Reference Status</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.ReferencesId</td>
+                    <td>@item.NameSurname</td>
+                    <td>@item.ImageUrl</td>
+                    <td>@item.Description</td>
+                    <td>@item.Status</td>
+                </tr>
+            }
+</table>
+
