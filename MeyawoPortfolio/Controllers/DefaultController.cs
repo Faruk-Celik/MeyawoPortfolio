@@ -48,6 +48,11 @@ namespace MeyawoPortfolio.Controllers
             var values = db.TblReferences.ToList();
             return PartialView(values);
         }
+        public PartialViewResult ContactPartial ()
+        {
+            var values = db.TblContact.ToList();
+            return PartialView(values);
+        }
         public PartialViewResult FooterPartial () 
         {
             var values = db.TblSocialMedia.ToList();

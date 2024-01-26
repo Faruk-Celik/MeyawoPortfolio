@@ -538,6 +538,8 @@
     <Content Include="Views\Default\PortfolioPartial.cshtml" />
     <Content Include="Views\Default\FooterPartial.cshtml" />
     <Content Include="Views\Default\SectionPartial.cshtml" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\MyCv\FarukCV.pdf" />
+    <Content Include="Views\Default\ContactPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
