@@ -8,9 +8,10 @@
 
 @Html.Partial("/Views/Default/HeadPartial.cshtml")
 
+@Html.Partial("/Views/Default/_BootstrapIconPartial.cshtml")
+
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <!-- Page Navbar -->
-
     @Html.Partial("/Views/Default/NavbarPartial.cshtml")
     <!-- End of Page Navbar -->
     <!-- page header -->
@@ -25,27 +26,23 @@
     <!-- portfolio section -->
     @Html.Action("PortfolioPartial")
     <!-- end of portfolio section -->
-    <!-- section -->
-    @Html.Partial("/Views/Default/SectionPartial.cshtml")
-    <!-- end of section -->
     <!-- testimonial section -->
-    @Html.Action("ReferencesPartial") 
+    @Html.Action("ReferencesPartial")
     <!-- end of testimonial section -->
     <!-- contact section -->
     @Html.Action("ContactPartial")
     <!-- end of contact section -->
+    <!-- section -->
+    @Html.Partial("/Views/Default/SectionPartial.cshtml")
+    <!-- end of section -->
     <!-- footer -->
-   @Html.Action("FooterPartial")
+    @Html.Action("FooterPartial")
     <!-- end of page footer -->
-    <!-- core  -->
-    <script src="~/Templates/meyawo-1.0.0/meyawo-1.0.0/assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="~/Templates/meyawo-1.0.0/meyawo-1.0.0/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- Script section -->
+    @Html.Action("ScriptPartial")
+    <!-- End Of The Script section -->
 
-    <!-- bootstrap 3 affix -->
-    <script src="~/Templates/meyawo-1.0.0/meyawo-1.0.0/assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
-    <!-- Meyawo js -->
-    <script src="~/Templates/meyawo-1.0.0/meyawo-1.0.0/assets/js/meyawo.js"></script>
 
 </body>
 

@@ -9,13 +9,17 @@ namespace MeyawoPortfolio.Controllers
 {
     public class DefaultController : Controller
     {
-        DbMyPortfolioEntities db = new DbMyPortfolioEntities(); 
-        public ActionResult Index()
+        DbMyPortfolioEntities db = new DbMyPortfolioEntities();
+        public ActionResult Index ()
         {
-           
+
             return View();
         }
         public PartialViewResult HeadPartial ()
+        {
+            return PartialView();
+        }
+        public PartialViewResult _BootstrapIconPartial ()
         {
             return PartialView();
         }
@@ -25,10 +29,10 @@ namespace MeyawoPortfolio.Controllers
         }
         public PartialViewResult FeaturePartial ()
         {
-            var values =db.TblFuture.ToList();
+            var values = db.TblFuture.ToList();
             return PartialView(values);
         }
-        public PartialViewResult AboutPartial () 
+        public PartialViewResult AboutPartial ()
         {
             var values = db.TblAbout.ToList();
             return PartialView(values);
@@ -53,7 +57,7 @@ namespace MeyawoPortfolio.Controllers
             var values = db.TblContact.ToList();
             return PartialView(values);
         }
-        public PartialViewResult FooterPartial () 
+        public PartialViewResult FooterPartial ()
         {
             var values = db.TblSocialMedia.ToList();
             return PartialView(values);
@@ -62,5 +66,11 @@ namespace MeyawoPortfolio.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult ScriptPartial ()
+        {
+            return PartialView();
+        }
+
+
     }
 }

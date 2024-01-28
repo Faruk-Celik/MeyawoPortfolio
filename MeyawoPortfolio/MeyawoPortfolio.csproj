@@ -245,19 +245,25 @@
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\analytics.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\avatar2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\avatar3.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\cloud.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\data_encryption.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\folio-1.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\folio-2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\folio-3.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\header.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\img-1.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\img-2.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\IMG_6082.JPG" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\IMG_6088.JPG" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\man.png" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\pencil-case.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\Positive_Dynamic.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\responsive.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\scooter.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\shipped.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\startup.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\toolbox.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\web.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\js\meyawo.js" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.affix.js" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.js" />
@@ -540,6 +546,7 @@
     <Content Include="Views\Default\SectionPartial.cshtml" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\MyCv\FarukCV.pdf" />
     <Content Include="Views\Default\ContactPartial.cshtml" />
+    <Content Include="Views\Default\_BootstrapIconPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

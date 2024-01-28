@@ -15,6 +15,11 @@ namespace MeyawoPortfolio.Controllers
             var values = db.TblProject.ToList();
             return View(values);
         }
+        public ActionResult CreateProject ()
+        {
+            var values = db.TblProject.ToList();
+            return View(values);
+        }
     }
 
 }
