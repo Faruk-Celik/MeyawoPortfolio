@@ -1,0 +1,25 @@
+﻿@model MeyawoPortfolio.Models.TblReferences
+@{
+    ViewBag.Title = "UpdateReference";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Update Reference</h2>
+
+<form method="post">
+    <label>Reference ID</label>
+    <input type="text" class="table table-bordered" value="@Model.ReferencesId" name="ReferenceId" />
+    <br />
+    <label>Reference Name</label>
+    <input type="text" class="table table-bordered" value="@Model.NameSurname" name="NameSurname" />
+    <br />
+    <label>Description</label>
+    <textarea rows="5" class="table table-bordered" value="@Model.Description" name="Description">@Model.Description</textarea>
+    <br />
+    <label>Status</label>
+    <input type="text" class="table table-bordered" value="@Model.Status" name="Status" />
+    <br />
+    <button class="btn btn-info">Save Changes</button>
+    <a href="/References/Index/" class="btn btn-outline-warning">Go Back</a>
+</form>
+

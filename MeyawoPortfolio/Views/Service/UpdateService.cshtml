@@ -1,0 +1,25 @@
+﻿@model MeyawoPortfolio.Models.TblService
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Update Services</h2>
+
+<form method="post">
+    <label>Service ID</label>
+    <input type="text" class="table table-bordered" value="@Model.ServiceID" name="ServiceID" />
+    <br />
+    <label>Service Title</label>
+    <input type="text" class="table table-bordered" value="@Model.Title" name="Title" />
+    <br />
+    <label> Service Image</label>
+    <input type="text" class="table table-bordered" value="@Model.ImageUrl" name="ImageUrl" />
+    <br />
+    <label>Service description</label>
+    <textarea rows="4" class="table table-bordered" value="@Model.Description" name="Description"> @Model.Description</textarea>
+    <br />
+    <button class="btn btn-info">Save Changes</button>
+    <a href="/Service/Index/" class="btn btn-outline-warning">Go Back</a>
+</form>
+

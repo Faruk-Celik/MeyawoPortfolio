@@ -28,11 +28,12 @@ namespace MeyawoPortfolio.Models
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TblAbout> TblAbout { get; set; }
         public virtual DbSet<TblCategory> TblCategory { get; set; }
-        public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<TblFuture> TblFuture { get; set; }
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblReferences> TblReferences { get; set; }
         public virtual DbSet<TblService> TblService { get; set; }
         public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
+        public virtual DbSet<TblAdminSidebar> TblAdminSidebar { get; set; }
+        public virtual DbSet<TblContact> TblContact { get; set; }
     }
 }

@@ -1,26 +1,28 @@
-﻿@model List<MeyawoPortfolio.Models.TblFuture>   
+﻿@model List<MeyawoPortfolio.Models.TblFuture>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h2>Future Page</h2>
+<h2>Feature Page</h2>
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
-        <th>Future Subject</th>
+        <th>Feature Subject</th>
         <th>Name</th>
-        <th>Future Title</th>
+        <th>Feature Title</th>
+        <th>Edit</th>
     </tr>
     @foreach (var item in Model)
-            {
-                 <tr>
-                     <td>@item.FutureID </td>
-                     <td>@item.Header </td>
-                     <td>@item.NameSurname </td>
-                     <td>@item.Title </td>
-                 </tr>
-            }
+    {
+        <tr>
+            <td>@item.FutureID </td>
+            <td>@item.Header </td>
+            <td>@item.NameSurname </td>
+            <td>@item.Title </td>
+            <td><a href="/Future/UpdateFuture/@item.FutureID" class="btn btn-outline-warning">Edit</a></td>
+        </tr>
+    }
 
 </table>
 

@@ -9,9 +9,8 @@
     <tr>
         <th>#</th>
         <th>Social Media</th>
-        <th>Social Media Link</th>
-        <th>Social Media Icon</th>
-        <th>Edit</th>
+        <th>Social Media Link</th>       
+        <th>Update</th>
         <th>Delete</th>
     </tr>
     @foreach (var item in Model)
@@ -19,14 +18,13 @@
         <tr>
             <td>@item.SocialMediaID</td>
             <td>@item.Title</td>
-            <td>@item.SocialMediaUrl</td>
-            <td>@item.Icon</td>
-            <td><a href="#" class="btn btn-warning"> Edit</a></td>
-            <td><a href="#" class="btn btn-danger"> Delete</a></td>
+            <td>@item.SocialMediaUrl</td>         
+            <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-outline-success"> Update</a></td>
+            <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-outline-danger"> Delete</a></td>
             
         </tr>
 
     }
 </table>
-<td><a href="#" class="btn btn-primary "> Add New Social Media</a></td>
+<td><a href="/SocialMedia/CreateSocialMedia/" class="btn btn-primary "> Add New Social Media</a></td>
 

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "CreateService";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Add New Service</h2>
+
+<form method="post">
+    <label>Service Title</label>
+    <input type="text" class="table table-bordered" name="Title" />
+    <br />
+    <label> Service Image</label>
+    <input type="text" class="table table-bordered" name="ImageUrl" />
+    <br />
+    <label>Service description</label>
+    <textarea rows="4" class="table table-bordered" name="Description"></textarea>
+    <br />
+    <button class="btn btn-info">Submit</button>
+    <a href="/Service/Index/" class="btn btn-outline-warning">Go Back</a>
+</form>
+

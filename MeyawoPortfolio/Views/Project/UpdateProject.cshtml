@@ -1,0 +1,35 @@
+﻿@model MeyawoPortfolio.Models.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Update Project</h2>
+
+<form method="post">
+    <label>Project ID</label>
+    <input type="text" class="table table-bordered" value="@Model.ProjectID" name="ProjectID" />
+    <br />
+    <label>Project Title</label>
+    <input type="text" class="table table-bordered" value="@Model.Title" name="Title" />
+    <br />
+    <label>Project Category</label>
+    <input type="text" class="table table-bordered" value="@Model.ProjectCategory" name="ProjectCategory" />
+    <br />
+    <label>Project Header</label>
+    <input type="text" class="table table-bordered" value="@Model.Header" name="Header" />
+    <br />
+    <label>Project Image Url</label>
+    <input type="text" class="table table-bordered" value="@Model.ImageUrl" name="ImageUrl" />
+    <br />
+    <label>Github Link</label>
+    <input type="text" class="table table-bordered" value="@Model.ProjectUrl" name="ProjectUrl" />
+    <br />
+    <label>Project Description</label>
+    <textarea rows="4" class="table table-bordered" value="@Model.Description" name="Description"> @Model.Description</textarea>
+    <br />
+    
+    <button class="btn btn-info">Save Changes</button>
+ 
+    <a href="/Project/Index/" class="btn btn-outline-warning">Go Back</a>
+</form>

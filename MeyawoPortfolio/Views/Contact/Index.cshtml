@@ -9,24 +9,26 @@
 
 <table class="table table-bordered">
     <tr>
-        <td>Message ID</td>
-        <td>Sender</td>
-        <td>Categories</td>
+        <td>#</td>
+        <td>From</td>
         <td>Date</td>
         <td>Open Message</td>
         <td>Delete Message</td>
+        <td>Message Status</td>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.ContactID</td>
-            <td>@item.NameSurname</td>
-            <td>@item.MessageCategory</td>
+            <td>@item.NameSurname</td>>
             <td>@item.SendDate</td>
-            <td ><a href="#" class="btn btn-info">Open Message</a></td>
-            <td ><a href="#" class="btn btn-danger">Delete Message</a></td>
+            <td><a href="/Contact/OpenMessage/@item.ContactID" class="btn btn-info">Open Message</a></td>
+            <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-danger">Delete Message</a></td>           
+            <td><a href="#" class="btn btn-success">@item.IsRead </a></td>
+
         </tr>
 
     }
 </table>
+
 

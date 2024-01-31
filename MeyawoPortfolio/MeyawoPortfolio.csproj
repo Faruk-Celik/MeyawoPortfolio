@@ -132,10 +132,8 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\FutureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ReferencesController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
@@ -162,6 +160,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblAbout.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblAdminSidebar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblCategory.cs">
@@ -306,10 +307,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Category\Index1.cshtml" />
-    <Content Include="Views\Category\Index2.cshtml" />
     <Content Include="Views\Shared\_TestLayout.cshtml" />
-    <Content Include="Views\Education\Index.cshtml" />
     <Content Include="Templates\sidebar-09\.DS_Store" />
     <Content Include="Templates\sidebar-09\css\.DS_Store" />
     <Content Include="Templates\sidebar-09\css\bootstrap\.DS_Store" />
@@ -411,7 +409,6 @@
     <Content Include="Templates\sidebar-09\scss\style.scss" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\AdminLayout\_HeaderPartial.cshtml" />
     <Content Include="Views\AdminLayout\_SidebarPartial.cshtml" />
     <Content Include="Views\AdminLayout\_Layout.cshtml" />
@@ -547,6 +544,18 @@
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\MyCv\FarukCV.pdf" />
     <Content Include="Views\Default\ContactPartial.cshtml" />
     <Content Include="Views\Default\_BootstrapIconPartial.cshtml" />
+    <Content Include="Views\Service\CreateService.cshtml" />
+    <Content Include="Views\Service\UpdateService.cshtml" />
+    <Content Include="Views\Project\CreateProject.cshtml" />
+    <Content Include="Views\Project\UpdateProject.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\References\CreateReference.cshtml" />
+    <Content Include="Views\References\UpdateReference.cshtml" />
+    <Content Include="Views\SocialMedia\CreateSocialMedia.cshtml" />
+    <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
+    <Content Include="Views\Future\UpdateFuture.cshtml" />
+    <Content Include="Views\Contact\OpenMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

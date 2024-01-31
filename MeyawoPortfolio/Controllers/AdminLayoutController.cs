@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MeyawoPortfolio.Models;
 
 namespace MeyawoPortfolio.Controllers
 {
     public class AdminLayoutController : Controller
     {
-        // GET: AdminLayout
-        public ActionResult _Layout()
+        DbMyPortfolioEntities db = new DbMyPortfolioEntities();
+        public ActionResult _Layout ()
         {
             return View();
         }
@@ -17,17 +18,17 @@ namespace MeyawoPortfolio.Controllers
         {
             return PartialView();
         }
-        public PartialViewResult _SidebarPartial()
-        { 
+        public PartialViewResult _SidebarPartial ()
+        {         
             return PartialView();
         }
-        public PartialViewResult _ScriptPartial()
+        public PartialViewResult _ScriptPartial ()
         {
             return PartialView();
         }
-        public PartialViewResult _BootstrapIconPartial()
+        public PartialViewResult _BootstrapIconPartial ()
         {
-            return PartialView(); 
+            return PartialView();
         }
     }
 }

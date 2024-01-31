@@ -1,0 +1,20 @@
+﻿@model MeyawoPortfolio.Models.TblCategory
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Update Category</h2>
+
+<form method="post">
+    <label>Category ID</label>
+    <input type="text" class="table table-bordered" value="@Model.CategoryID" name="CategoryID" />
+    <label>Category Name</label>
+    <input type="text" class="table table-bordered" value="@Model.CategoryName" name="CategoryID" />
+    <br />
+
+    <button class="btn btn-info">Save Changes</button>
+    <a href="/Category/Index/" class="btn btn-outline-warning">Go Back</a>
+
+</form>
+

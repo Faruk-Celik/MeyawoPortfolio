@@ -4,21 +4,23 @@
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h2>Services</h2>
+<h2>Service list</h2>
 <table class="table table-bordered">
     <tr>
-        <th>Service ID</th>
+        <th>#</th>
         <th>Service Title</th>
-        <th>Service Description</th>
-        <th>Service Image</th>
+        <th>Update</th>
+        <th>Delete</th>
     </tr>
     @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.ServiceID</td>
-                    <td>@item.Title</td>
-                    <td>@item.Description</td>
-                    <td>@item.ImageUrl</td>
-                </tr>
-            }
+    {
+        <tr>
+            <td>@item.ServiceID</td>
+            <td>@item.Title</td>
+            <td><a href="/Service/UpdateService/@item.ServiceID" class="btn btn-outline-success">Update</a></td>
+            <td><a href="/Service/DeleteService/@item.ServiceID" class="btn btn-outline-danger">Delete</a></td>
+
+        </tr>
+    }
 </table>
+<a href="/Service/CreateService/" class="btn btn-primary">Add New Service</a>

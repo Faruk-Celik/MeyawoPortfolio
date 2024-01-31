@@ -1,0 +1,15 @@
+﻿@model MeyawoPortfolio.Models.TblCategory
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Add New Category</h2>
+
+<form method="post">
+    <label>Category Name</label>
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "table table-bordered" })
+<button class="btn btn-info">Submit</button>
+    <a href="/Category/Index/" class="btn btn-outline-warning">Go Back</a>
+</form>
+

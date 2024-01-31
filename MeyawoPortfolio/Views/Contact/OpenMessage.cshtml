@@ -1,0 +1,22 @@
+﻿@model MeyawoPortfolio.Models.TblContact
+@{
+    ViewBag.Title = "OpenMessage";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<div class="rounded-pill"> <h2 class="table table-bordered text-center" style="color:cadetblue  ">@Model.NameSurname</h2></div>
+
+<form method="post">
+    <br />
+    <br />
+    <h3 type="text" class="table table-borderless text-lg-center  " value="@Model.Message" name="Message">
+        <span style="color:darkviolet">@Model.Message</span>
+    </h3>
+    <br />
+   
+        <div class="col-md-12 text-center ">
+            <a href="/Contact/Index/" class="  btn btn-warning ">Go Back</a>
+        </div>
+   
+    
+</form>

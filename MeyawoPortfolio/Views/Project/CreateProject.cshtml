@@ -1,19 +1,30 @@
-﻿﻿
+﻿@model MeyawoPortfolio.Models.TblProject
 @{
     ViewBag.Title = "CreateProject";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h2>Yeni Proje Girişi</h2>
+<h2>Add New Project</h2>
 
-<label>Proje Başlığı</label>
-<input type="text" class="form-control" style="border:solid" />
-<br />
-<label>Proje Görsel Linki</label>
-<input type="text" class="form-control" style="border:solid" />
-<br />
-<label>Github Linki</label>
-<input type="text" class="form-control" style="border:solid" />
-<br />
-<label>Açıklama</label>
-<textarea rows="5" class="form-control" style="border:solid"></textarea>
+<form method="post">
+    <label>Project Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+    <br />
+    <label>Project Header</label>
+    @Html.TextBoxFor(x => x.Header, new { @class = "table table-bordered" })
+    <br />
+    <label>Project Image</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table-bordered" })
+    <br />
+    <label>Github Link</label>
+    @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "table table-bordered" })
+    <br />
+    <label>Project Category</label>
+    @Html.TextBoxFor(x => x.ProjectCategory, new { @class = "table table-bordered" })
+    <br />
+    <label>Description</label>
+    <textarea rows="5" class="table table-bordered" name="Description"></textarea>
+
+    <button class="btn btn-info">Submit</button>
+    <a href="/project/Index/" class="btn btn-outline-warning">Go Back</a>
+</form>

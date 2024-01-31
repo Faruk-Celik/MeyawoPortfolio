@@ -10,19 +10,26 @@
     <tr>
         <th>Reference ID</th>
         <th>Reference Name</th>
-        <th>Reference Image</th>
         <th>Reference Description</th>
+        <th>Update</th>
+        <th>Delete</th>
         <th>Reference Status</th>
     </tr>
-    @foreach(var item in Model)
-            {
-                <tr>
-                    <td>@item.ReferencesId</td>
-                    <td>@item.NameSurname</td>
-                    <td>@item.ImageUrl</td>
-                    <td>@item.Description</td>
-                    <td>@item.Status</td>
-                </tr>
-            }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ReferencesId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Description</td>
+            <td>
+                <a href="/References/UpdateReference/@item.ReferencesId" class="btn btn-outline-success">Update</a>
+            </td>
+            <td>
+                <a href="/References/DeleteReference/@item.ReferencesId" class="btn btn-outline-danger">Delete</a>
+            </td>
+            <td><a href="#" class="btn btn-success">@item.Status</a></td>
+        </tr>
+    }
 </table>
+<a href="/References/CreateReference/" class="btn btn-primary">Add New Reference</a>
 
