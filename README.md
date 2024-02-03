@@ -1,23 +1,35 @@
 <h1>Project Overview</h1>
+
 - This project quickly create a CV site with an admin panel.
 
-This project is combined with the Db First approach, thus managing database design and developments together, increasing efficiency and making maintenance easier.
+-This project is combined with the Db First approach, thus managing database design and developments together, increasing efficiency and making maintenance easier.
 
 <h2>Technologies Used</h2>
 
-ASP.NET MVC (.NET Framework)
+-ASP.NET MVC (.NET Framework)
 
-Entity Framework
+-Entity Framework
 
-SQL
+-MSSQL
 
-<h2>User Interface Features:</h2>
+<h2>Project image</h2>
+
+![Screenshot 2024-02-03 at 13-25-10 Meyawo Portfolio Project](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/97022eb7-6d65-48f4-83b7-51319d951ee2)
+
+<h3>Admin Panel Features:</h3>
+
+Easy Content Management: It is possible to add, delete and update all pages on the front-end through the admin panel.
+
+Statistics section: statistics about users and themselves can be accessed.
+
+CV Download in PDF Format: Allows users to download the CV they have prepared in the appropriate PDF format.
+
+<h2>Admin Panel image</h2>
 
 <h3>Dashboard Page: </h3>
 
 ![Screenshot 2024-02-03 at 13-12-45 Faruk Çelik](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/e3f024f0-eff7-4a00-8c3f-f4de5ec30825)
 
-  
 <h3>Categories Page: </h3>
   
 ![Screenshot 2024-02-03 at 12-57-43 Faruk Çelik](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/3e3fb308-a942-4e98-93f9-55c9ff27e298)
@@ -47,21 +59,4 @@ SQL
 <h3>Sql Database Diagrams: </h3>
   
 ![Ekran görüntüsü 2024-02-03 131900](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/9655c69e-ec60-404a-b86b-71c6394a9595)
-
-<h3>Admin Panel Features:</h3>
-
-Easy Content Management: It is possible to add, delete and update all pages on the front-end through the admin panel.
-
-With the Statistics section, statistics about users and themselves can be accessed.
-
-CV Download in PDF Format: Allows users to download the CV they have prepared in the appropriate PDF format.
-
-<h3>Project images</h3>
-
-![Screenshot 2024-02-03 at 13-19-51 Meyawo Portfolio Project](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/68c924d9-9b48-413d-b678-9d13f46beead)
-
-
-
-
-
 
