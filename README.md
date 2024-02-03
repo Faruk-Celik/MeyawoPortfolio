@@ -4,7 +4,7 @@
 
 -This project is combined with the Db First approach, thus managing database design and developments together, increasing efficiency and making maintenance easier.
 
-<h1>Technologies Used</h1>
+<h1>Technologies Used:</h1>
 
 -ASP.NET MVC (.NET Framework)
 
@@ -12,7 +12,7 @@
 
 -MSSQL
 
-<h1>Project image</h1>
+<h1>Project image:</h1>
 
 ![Screenshot 2024-02-03 at 13-25-10 Meyawo Portfolio Project](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/97022eb7-6d65-48f4-83b7-51319d951ee2)
 
@@ -24,7 +24,7 @@ Statistics section: statistics about users and themselves can be accessed.
 
 CV Download in PDF Format: Allows users to download the CV they have prepared in the appropriate PDF format.
 
-<h1>Admin Panel image:</h1>
+<h1>Admin Panel image: </h1>
 
 <h2>Dashboard Page: </h2>
 
