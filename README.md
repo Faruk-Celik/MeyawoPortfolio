@@ -1,3 +1,5 @@
+<h1 class="display-1">Display 1</h1>
+
 <h1>Project Overview</h1>
 
 - This project quickly create a CV site with an admin panel.
