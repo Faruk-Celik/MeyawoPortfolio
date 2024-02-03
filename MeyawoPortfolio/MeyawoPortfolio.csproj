@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.3.3\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.3\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -131,6 +132,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FutureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -138,6 +140,7 @@
     <Compile Include="Controllers\ReferencesController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -243,6 +246,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\css\meyawo.css" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\hospital.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\ntier.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\portfolio.jpeg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\ppp.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\ProfilePicture.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\analytics.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\avatar2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\avatar3.jpg" />
@@ -263,7 +271,10 @@
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\scooter.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\shipped.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\startup.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\todo.jpeg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\toolbox.svg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\Untitled.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\web.jpg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\imgs\web.svg" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\js\meyawo.js" />
     <Content Include="Templates\meyawo-1.0.0\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.affix.js" />
@@ -288,6 +299,7 @@
     <Content Include="Templates\sidebar-09\css\style.css" />
     <Content Include="Templates\sidebar-09\images\bg_1.jpg" />
     <Content Include="Templates\sidebar-09\images\logo.jpg" />
+    <Content Include="Templates\sidebar-09\images\ProfilePicture.jpg" />
     <Content Include="Templates\sidebar-09\index.html" />
     <Content Include="Templates\sidebar-09\js\bootstrap.min.js" />
     <Content Include="Templates\sidebar-09\js\jquery.min.js" />
@@ -556,6 +568,9 @@
     <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
     <Content Include="Views\Future\UpdateFuture.cshtml" />
     <Content Include="Views\Contact\OpenMessage.cshtml" />
+    <Content Include="Views\Exit\View.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -589,6 +604,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
@@ -624,7 +640,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.3\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.3.3\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.3\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.3.3\build\Microsoft.TypeScript.MSBuild.targets'))" />
   </Target>
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.3.3\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.3\build\Microsoft.TypeScript.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

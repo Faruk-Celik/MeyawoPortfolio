@@ -3,19 +3,57 @@
     ViewBag.Title = "CreateReference";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
-
-<h2>Add New Reference</h2>
-
-<form method="post">
-    <label>Reference Name</label>
-    @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table-bordered" })
-    <label>Reference Status</label>
-    @Html.TextBoxFor(x => x.Status, new { @class = "table table-bordered" })
-    <label>Description</label>
-    <textarea rows="5" class="table table-bordered" name="Description"></textarea>
+<div class="text-center">
+    <h2>Add New Reference</h2>
+</div>
+<head>
+    <style>
 
 
-    <button class="btn btn-info">Submit</button>
-    <a href="/References/Index/" class="btn btn-outline-warning">Go Back</a>
-</form>
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
 
+            form label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            form input[type=text],
+            form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 2px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+                form input[type=text]:focus,
+                form textarea:focus {
+                    border-color: #4A90E2;
+                    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+                    outline: none;
+                }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <label>Reference Name</label>
+        @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table-bordered" })
+        <label>Reference Status</label>
+        @Html.TextBoxFor(x => x.Status, new { @class = "table table-bordered" })
+        <label>Description</label>
+        <textarea rows="5" class="table table-bordered" name="Description"></textarea>
+
+
+        <button class="btn btn-info">Submit</button>
+        <a href="/References/Index/" class="btn btn-outline-warning">Go Back</a>
+    </form>
+    </body>

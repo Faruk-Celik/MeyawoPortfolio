@@ -17,7 +17,7 @@
     <textarea rows="5" class="table table-bordered" value="@Model.Description" name="Description">@Model.Description</textarea>
     <br />
     <label>Status</label>
-    <input type="text" class="table table-bordered" value="@Model.Status" name="Status" />
+    @Html.TextBoxFor(x => x.Status, new { @class = "table table-bordered" })
     <br />
     <button class="btn btn-info">Save Changes</button>
     <a href="/References/Index/" class="btn btn-outline-warning">Go Back</a>

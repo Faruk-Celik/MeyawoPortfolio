@@ -6,28 +6,31 @@
     </div>
     <div class="img bg-wrap text-center py-4" style="background-image: url(/Templates/sidebar-09/images/bg_1.jpg);">
         <div class="user-logo">
-            <div class="img" style="background-image: url(/Templates/sidebar-09/images/logo.jpg);"></div>
+            <div class="img" style="background-image: url(/Templates/sidebar-09/images/ProfilePicture.jpg);"></div>
             <h3>Faruk Çelik</h3>
         </div>
     </div>
     <ul class="list-unstyled components mb-5">
         <li class="active">
-            <a href="#"><i class="bi bi-house mr-3"></i> Dashboard</a>
+            <a href="/Dashboard/Index"><i class="bi bi-house mr-3"></i>Dashboard</a>
         </li>
         <li>
-            <a href="/Templates/meyawo-1.0.0/meyawo-1.0.0/assets/MyCv/FarukCV.pdf" download="/Templates/meyawo-1.0.0/meyawo-1.0.0/assets/MyCv/FarukCV.pdf"  role="button" ><i class="bi bi-download mr-3"></i> Download Cv</a>
-        </li>       
+            <a href="/Default/Index"><i class="bi bi-person-circle mr-3"></i>Main Page</a>
+        </li>
+        <li>
+            <a href="/Templates/meyawo-1.0.0/meyawo-1.0.0/assets/MyCv/FarukCV.pdf" download="/Templates/meyawo-1.0.0/meyawo-1.0.0/assets/MyCv/FarukCV.pdf" role="button"><i class="bi bi-download mr-3"></i>Download Cv</a>
+        </li>
         <li>
             <a href="/Category/Index"><i class="bi bi-tags mr-3"></i>Categories</a>
         </li>
         <li>
             <a href="/Project/Index"><i class="bi bi-cast mr-3"></i>Project</a>
-        </li>    
+        </li>
         <li>
             <a href="/Contact/Index"><i class="bi bi-person-lines-fill mr-3"></i>Contact</a>
         </li>
         <li>
-            <a href="/Future/Index"><i class="bi bi-columns-gap mr-3"></i>Future</a>
+            <a href="/Future/Index"><i class="bi bi-columns-gap mr-3"></i>Feature</a>
         </li>
         <li>
             <a href="/SocialMedia/Index"><i class="bi bi-stars mr-3"></i>Social Media</a>
@@ -39,10 +42,19 @@
             <a href="/Service/Index"><i class="bi bi-tools mr-3"></i>Service</a>
         </li>
         <li>
-            <a href="#"><i class="bi bi-gear mr-3"></i>Settings</a>
+            <a href="/Statistic/Index"><i class="bi bi-people mr-3"></i>Statistic</a>
         </li>
+
         <li>
-            <a href="#"><i class="bi bi-x-lg mr-3"></i>Exit</a>
+            <a href="#" onclick="closeWin()"><i class="bi bi-x-lg mr-3"></i>Exit</a>
+            <script>
+                let myWindow;
+                function closeWin() {
+                    myWindow.close();
+                }
+
+            </script>
+
         </li>
     </ul>
 

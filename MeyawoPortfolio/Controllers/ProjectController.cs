@@ -18,6 +18,13 @@ namespace MeyawoPortfolio.Controllers
         [HttpGet]
         public ActionResult CreateProject ()
         {
+            List<SelectListItem> values= (from x in db.TblCategory.ToList()
+                                          select new SelectListItem
+                                          {
+                                               Text=x.CategoryName,
+                                               Value=x.CategoryID.ToString(),
+                                          }).ToList();
+            ViewBag.v=values;
             return View();
         }
         [HttpPost]
@@ -38,12 +45,20 @@ namespace MeyawoPortfolio.Controllers
         public ActionResult UpdateProject ( int id )
         {
             var value = db.TblProject.Find(id);
+            List<SelectListItem> values1 = (from x in db.TblCategory.ToList()
+                                            select new SelectListItem
+                                            {
+                                                Text = x.CategoryName,
+                                                Value = x.CategoryID.ToString(),
+                                            }).ToList();
+            ViewBag.v = values1;
+            
             return View(value);
         }
         [HttpPost]
         public ActionResult UpdateProject ( TblProject p )
         {
-            var value = db.TblProject.Find(p.ProjectID);
+            var value = db.TblProject.Find(p.ProjectID);          
             value.ProjectUrl = p.ProjectUrl;
             value.Title = p.Title;
             value.Header = p.Header;

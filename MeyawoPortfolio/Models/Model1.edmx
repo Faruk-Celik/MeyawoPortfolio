@@ -103,9 +103,7 @@
           <Property Name="Icon" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_TblProject_TblCategory">
-          <End Role="TblCategory" Type="Self.TblCategory" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="TblCategory" Type="Self.TblCategory" Multiplicity="0..1" />
           <End Role="TblProject" Type="Self.TblProject" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TblCategory">
@@ -116,6 +114,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="LastProjectName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="LastServiceTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbMyPortfolioModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
@@ -241,6 +241,8 @@
           </AssociationSet>
           <EntitySet Name="TblAdminSidebar" EntityType="DbMyPortfolioModel.TblAdminSidebar" />
           <EntitySet Name="TblContact" EntityType="DbMyPortfolioModel.TblContact" />
+          <FunctionImport Name="LastProjectName" ReturnType="Collection(String)" />
+          <FunctionImport Name="LastServiceTitle" ReturnType="Collection(String)" />
         </EntityContainer>
         <EntityType Name="TblAdminSidebar">
           <Key>
@@ -376,6 +378,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="LastProjectName" FunctionName="DbMyPortfolioModel.Store.LastProjectName" />
+          <FunctionImportMapping FunctionImportName="LastServiceTitle" FunctionName="DbMyPortfolioModel.Store.LastServiceTitle" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

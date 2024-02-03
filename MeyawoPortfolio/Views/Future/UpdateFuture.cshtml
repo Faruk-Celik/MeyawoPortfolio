@@ -3,24 +3,64 @@
     ViewBag.Title = "UpdateFuture";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
-
-<h2> Edit Feature </h2>
-<form method="post">
-    <label> # </label>
-    <input type="text" class="table table-bordered" value="@Model.FutureID" name="FutureID" />
-    <br />
-    <label> Header </label>
-    <input type="text" class="table table-bordered" value="@Model.Header" name="Header" />
-    <br />
-    <label> Name Surname </label>
-    <input type="text" class="table table-bordered" value="@Model.NameSurname" name="NameSurname" />
-    <br />
-    <label> Title </label>
-    <input type="text" class="table table-bordered" value="@Model.Title" name="Title" />
-    <br />
-    <button class="btn btn-info"> Submit </button>
-    <a href="/Future/Index/" class="btn btn-outline-warning"> Go Back </a>
+<div class="text-center">
+    <h2> Edit Feature </h2>
+</div>
+<head>
+    <style>
 
 
-</form>
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
 
+            form label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            form input[type=text],
+            form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 2px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+                form input[type=text]:focus,
+                form textarea:focus {
+                    border-color: #4A90E2;
+                    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+                    outline: none;
+                }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <label> # </label>
+        <input type="text" class="table table-bordered" readonly value="@Model.FutureID" name="FutureID" />
+        <br />
+        <label> Header </label>
+        <input type="text" class="table table-bordered" value="@Model.Header" name="Header" />
+        <br />
+        <label> Name Surname </label>
+        <input type="text" class="table table-bordered" value="@Model.NameSurname" name="NameSurname" />
+        <br />
+        <label> Title </label>
+        <input type="text" class="table table-bordered" value="@Model.Title" name="Title" />
+        <br />
+        <button class="btn btn-info"> Submit </button>
+        <a href="/Future/Index/" class="btn btn-outline-warning"> Go Back </a>
+
+
+    </form>
+
+</body>

@@ -3,20 +3,64 @@
     ViewBag.Title = "CreateService";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
+<div class="text-center"><h2> Add New Service</h2></div>
 
-<h2>Add New Service</h2>
 
-<form method="post">
-    <label>Service Title</label>
-    <input type="text" class="table table-bordered" name="Title" />
-    <br />
-    <label> Service Image</label>
-    <input type="text" class="table table-bordered" name="ImageUrl" />
-    <br />
-    <label>Service description</label>
-    <textarea rows="4" class="table table-bordered" name="Description"></textarea>
-    <br />
-    <button class="btn btn-info">Submit</button>
-    <a href="/Service/Index/" class="btn btn-outline-warning">Go Back</a>
-</form>
 
+<head>
+    <style>
+     
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+
+            form label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            form input[type=text],
+            form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 2px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+                form input[type=text]:focus,
+                form textarea:focus {
+                    border-color: #4A90E2;
+                    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+                    outline: none;
+                }
+
+       
+
+    </style>
+</head>
+<body>
+
+    <form method="post">
+        <label>Service Title</label>
+        <input type="text" class="form-control" name="Title" />
+        <br />
+        <label> Service Image</label>
+        <input type="text" class="form-control" name="ImageUrl" />
+        <br />
+        <label>Service description</label>
+        <textarea rows="4" class="form-control" name="Description"></textarea>
+        <br />
+        <button class="btn btn-info">Submit</button>
+        <a href="/Service/Index/" class="btn btn-outline-warning">Go Back</a>
+    </form>
+
+</body>

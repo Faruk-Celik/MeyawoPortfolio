@@ -41,5 +41,29 @@ namespace MeyawoPortfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult MarkAsRead ( int id )
+        {
+            var message = db.TblContact.Find(id);
+            message.IsRead = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult Create ( string NameSurname, string Email, string Message )
+        {
+            TblContact newContact = new TblContact
+            {
+                NameSurname = NameSurname,
+                Email = Email,
+                Message = Message,
+                SendDate = DateTime.Now,
+                IsRead = false
+            };
+
+            db.TblContact.Add(newContact);
+            db.SaveChanges();
+
+            return RedirectToAction("Index"); // İşlem tamamlandıktan sonra kullanıcıyı yönlendir
+        }
     }
 }

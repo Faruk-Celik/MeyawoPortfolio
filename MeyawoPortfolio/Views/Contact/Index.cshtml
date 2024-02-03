@@ -7,6 +7,15 @@
 
 <h2>Incoming Messages Page</h2>
 
+
+<script type="text/javascript">
+    function ShowModal() {
+
+        $("#exampleModal").modal('show');
+    }
+</script>
+
+
 <table class="table table-bordered">
     <tr>
         <td>#</td>
@@ -20,13 +29,39 @@
     {
         <tr>
             <td>@item.ContactID</td>
-            <td>@item.NameSurname</td>>
+            <td>@item.NameSurname</td>
             <td>@item.SendDate</td>
-            <td><a href="/Contact/OpenMessage/@item.ContactID" class="btn btn-info">Open Message</a></td>
-            <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-danger">Delete Message</a></td>           
-            <td><a href="#" class="btn btn-success">@item.IsRead </a></td>
+            <td><a class="btn btn-info" onclick="ShowModal()">Open Message</a></td>
+
+            <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-danger">Delete Message</a></td>
+            <td>@item.IsRead</td>
 
         </tr>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                       
+                            <h5 class="modal-title" id="exampleModalLabel">@item.NameSurname</h5>
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                       
+                            <h4 value="@item.Message">@item.Message </h4>
+                        
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     }
 </table>

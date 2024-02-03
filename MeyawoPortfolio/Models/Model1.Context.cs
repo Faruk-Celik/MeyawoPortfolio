@@ -12,6 +12,8 @@ namespace MeyawoPortfolio.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DbMyPortfolioEntities : DbContext
     {
@@ -35,5 +37,15 @@ namespace MeyawoPortfolio.Models
         public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
         public virtual DbSet<TblAdminSidebar> TblAdminSidebar { get; set; }
         public virtual DbSet<TblContact> TblContact { get; set; }
+    
+        public virtual ObjectResult<string> LastProjectName()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("LastProjectName");
+        }
+    
+        public virtual ObjectResult<string> LastServiceTitle()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("LastServiceTitle");
+        }
     }
 }
