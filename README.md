@@ -16,6 +16,10 @@
 
 ![Screenshot 2024-02-03 at 13-25-10 Meyawo Portfolio Project](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/97022eb7-6d65-48f4-83b7-51319d951ee2)
 
+<h2>Sql Database Diagrams: </h2>
+  
+![Ekran görüntüsü 2024-02-03 131900](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/9655c69e-ec60-404a-b86b-71c6394a9595)
+
 <h2>Admin Panel Features:</h2>
 
 Easy Content Management: It is possible to add, delete and update all pages on the front-end through the admin panel.
@@ -56,7 +60,5 @@ CV Download in PDF Format: Allows users to download the CV they have prepared in
 
 ![Screenshot 2024-02-03 at 13-18-16 Faruk Çelik](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/7a7038e1-1649-4b2b-9813-cd3bb1a663ad)
 
-<h2>Sql Database Diagrams: </h2>
-  
-![Ekran görüntüsü 2024-02-03 131900](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/9655c69e-ec60-404a-b86b-71c6394a9595)
+
 
