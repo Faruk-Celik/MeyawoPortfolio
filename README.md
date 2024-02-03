@@ -1,6 +1,8 @@
 <h1>Project Overview</h1>
 - This project quickly create a CV site with an admin panel.
 
+This project is combined with the Db First approach, thus managing database design and developments together, increasing efficiency and making maintenance easier.
+
 <h2>Technologies Used</h2>
 
 ASP.NET MVC (.NET Framework)
@@ -15,11 +17,7 @@ SQL
 
 ![Screenshot 2024-02-03 at 13-12-45 Faruk Çelik](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/e3f024f0-eff7-4a00-8c3f-f4de5ec30825)
 
-<h3>CV Download in PDF Format: Allows users to download the CV they have prepared in the appropriate PDF format.
   
-<h3>Main page:</h3>
-
-
 <h3>Categories Page: </h3>
   
 ![Screenshot 2024-02-03 at 12-57-43 Faruk Çelik](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/3e3fb308-a942-4e98-93f9-55c9ff27e298)
@@ -56,12 +54,14 @@ Easy Content Management: It is possible to add, delete and update all pages on t
 
 With the Statistics section, statistics about users and themselves can be accessed.
 
+CV Download in PDF Format: Allows users to download the CV they have prepared in the appropriate PDF format.
+
 <h3>Project images</h3>
 
 ![Screenshot 2024-02-03 at 13-19-51 Meyawo Portfolio Project](https://github.com/Faruk-Celik/MeyawoPortfolio/assets/72822335/68c924d9-9b48-413d-b678-9d13f46beead)
 
 
 
-This project is combined with the Db First approach, thus managing database design and developments together, increasing efficiency and making maintenance easier.
+
 
 
